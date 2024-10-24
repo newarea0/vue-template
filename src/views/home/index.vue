@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import { useCounterStore } from '../../stores/counter'
+import { useCounterStore } from '@/stores/counter'
+import { MinusOutlined } from '@ant-design/icons-vue'
+import { h } from 'vue'
 
 const counter = useCounterStore()
 </script>
@@ -9,12 +11,13 @@ const counter = useCounterStore()
     <h1>Home</h1>
     <p>Count: {{ counter.count }}</p>
     <p>Double Count: {{ counter.doubleCount }}</p>
-    <button @click="counter.increment">
-      Increment
-    </button>
-    <button @click="counter.decrement">
+    <a-button type="primary" @click="counter.increment">
+      <PlusOutlined />
+      <!-- Increment -->
+    </a-button>
+    <a-button :icon="h(MinusOutlined)" @click="counter.decrement">
       Decrement
-    </button>
+    </a-button>
   </div>
 </template>
 
