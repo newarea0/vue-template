@@ -46,6 +46,6 @@
   "explorer.fileNesting.expand": false,
   "explorer.fileNesting.patterns": {
     "package.json": "pnpm-lock.yaml,.gitignore,README.md",
-    "tailwind.config.js": "postcss.config.js"
+    "eslint.config.js": "commitlint.config.js"
   }
 }
