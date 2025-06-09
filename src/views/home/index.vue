@@ -18,6 +18,10 @@ const counter = useCounterStore()
     <a-button :icon="h(MinusOutlined)" @click="counter.decrement">
       Decrement
     </a-button>
+
+    <IconMdiAlarmOff />
+    <IconMdiAccountBox />
+    <IconCustomVue />
   </div>
 </template>
 

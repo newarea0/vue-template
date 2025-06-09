@@ -1,3 +1,4 @@
+import IconResolver from 'unplugin-icons/resolver'
 import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers'
 import components from 'unplugin-vue-components/vite'
 
@@ -8,6 +9,10 @@ export default function createComponents() {
       AntDesignVueResolver ({
         importStyle: false,
         resolveIcons: true,
+      }),
+      IconResolver({
+        prefix: 'Icon',
+        customCollections: ['custom'],
       }),
     ],
   })
